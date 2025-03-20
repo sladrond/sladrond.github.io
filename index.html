@@ -1,24 +1,117 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Your Name</title>
-  <style>
-    body {
-      font-family: sans-serif;
-      text-align: center;
-      margin: 50px;
-    }
-    h1 { font-size: 3em; }
-    p { font-size: 1.2em; }
-    a { color: #007acc; text-decoration: none; }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Resume</title>
+  <!-- Google Fonts for modern typography -->
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Montserrat:wght@700&display=swap" rel="stylesheet" />
+  <!-- Link to external CSS file -->
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <h1>Hello, I'm [Your Name]</h1>
-  <p>Welcome to my website! I'm a [Your Role or Passion].</p>
-  <p><a href="mailto:you@example.com">Contact Me</a></p>
+  <!-- Navigation Header -->
+  <header class="site-header">
+    <div class="container">
+      <!-- Logo / Site Name -->
+      <h1 class="logo">Your Name</h1>
+      <!-- Navigation toggle (for mobile view) -->
+      <input type="checkbox" id="nav-toggle" class="nav-toggle" />
+      <label for="nav-toggle" class="nav-toggle-label">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+      <!-- Navigation Menu -->
+      <nav>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Home Section (Introduction & Contact Info) -->
+  <section id="home" class="home-section">
+    <div class="container">
+      <h2>Hello, I'm <span class="highlight">Your Name</span>.</h2>
+      <p class="tagline">
+        A passionate software engineer with expertise in full-stack web development and project management.
+      </p>
+      <p class="contact-brief">
+        <!-- Contact info (email and social links) -->
+        <a href="mailto:youremail@example.com">youremail@example.com</a> &bull;
+        <a href="#">LinkedIn</a> &bull;
+        <a href="#">GitHub</a>
+      </p>
+    </div>
+  </section>
+
+  <!-- About Section (Professional Summary) -->
+  <section id="about">
+    <div class="container">
+      <h2>About</h2>
+      <p>
+        I am a results-driven professional with over 5 years of experience in software development. 
+        My expertise lies in building scalable web applications and leading cross-functional teams to success. 
+        I have a strong background in computer science and a passion for learning new technologies. 
+        In my previous roles, I implemented innovative solutions that improved system performance by 30% and enhanced user experience significantly.
+      </p>
+    </div>
+  </section>
+
+  <!-- Projects Section (Key Projects with descriptions and links) -->
+  <section id="projects">
+    <div class="container">
+      <h2>Projects</h2>
+      <ul class="projects-list">
+        <li>
+          <strong>Project One:</strong> Developed a web-based task management app using React and Node.js. 
+          <a href="#">View Project</a>
+        </li>
+        <li>
+          <strong>Project Two:</strong> Created a machine learning pipeline for predicting stock prices. 
+          <a href="#">View Project</a>
+        </li>
+        <li>
+          <strong>Project Three:</strong> Built a responsive portfolio website using HTML, CSS, and JavaScript. 
+          <a href="#">View Project</a>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Skills Section (Technical proficiencies) -->
+  <section id="skills">
+    <div class="container">
+      <h2>Skills</h2>
+      <ul class="skills-list">
+        <li>JavaScript / TypeScript</li>
+        <li>HTML5 &amp; CSS3</li>
+        <li>React &amp; Redux</li>
+        <li>Node.js &amp; Express</li>
+        <li>Python &amp; Django</li>
+        <li>SQL &amp; NoSQL Databases</li>
+        <li>Git &amp; Agile Methodologies</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Contact Section (Contact details and social links) -->
+  <section id="contact">
+    <div class="container">
+      <h2>Contact</h2>
+      <p>
+        Feel free to reach out to discuss potential opportunities or collaborations. You can contact me via email or connect on social media:
+      </p>
+      <p>Email: <a href="mailto:youremail@example.com">youremail@example.com</a></p>
+      <p>LinkedIn: <a href="#">linkedin.com/in/yourprofile</a></p>
+      <p>GitHub: <a href="#">github.com/yourusername</a></p>
+    </div>
+  </section>
 </body>
 </html>
