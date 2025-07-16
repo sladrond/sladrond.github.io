@@ -1,18 +1,17 @@
 /* General Styles and Typography */
 body {
-  margin: 0;  /* Remove default body margin */
-  font-family: "Helvetica", "Arial", sans-serif;  /* Use a clean sans-serif font */
-  color: #333;  /* Base text color (dark gray for readability on light backgrounds) */
+  margin: 0;
+  font-family: "Helvetica", "Arial", sans-serif;
+  color: #1A2B4C; /* navy blue for base text */
 }
 
-/* Smooth scrolling for anchor links */
 html {
   scroll-behavior: smooth;
 }
 
 /* Navigation Bar */
 nav {
-  background-color: #006f6f; /* dark teal background */
+  background-color: #1A2B4C; /* navy background */
   color: #fff;
   display: flex;
   align-items: center;
@@ -20,7 +19,6 @@ nav {
   padding: 10px 20px;
 }
 
-/* Brand name/logo in nav */
 nav .brand {
   font-weight: bold;
   font-size: 1.2em;
@@ -28,18 +26,10 @@ nav .brand {
   text-decoration: none;
 }
 
-/* Nav menu (unordered list) */
 .nav-menu {
   list-style: none;
   margin: 0;
   padding: 0;
-  /* For desktop, we'll show this as flex; for mobile, it will be hidden (handled in media query) */
-}
-
-/* Nav menu items */
-.nav-menu li {
-  /* On desktop, items will be in a row; on mobile, in a column */
-  /* (Flex behavior set in media query) */
 }
 
 .nav-menu a {
@@ -49,48 +39,43 @@ nav .brand {
   padding: 8px 12px;
 }
 
-/* Hover effect for nav links (desktop) */
 .nav-menu a:hover {
-  background-color: #008080; /* slightly lighter teal for hover background */
+  background-color: #3DA5D9; /* cerulean blue */
   color: #fff;
 }
 
-/* Navigation toggle button (hamburger) - visible on mobile, hidden on desktop */
 .nav-toggle {
   cursor: pointer;
   font-size: 1.5em;
   color: #fff;
-  display: none; /* show it in mobile via media query */
+  display: none;
 }
 
 /* Main Content Sections */
 main > * {
-  padding: 60px 20px;  /* space around sections (60px top/bottom, 20px sides) */
+  padding: 60px 20px;
 }
 
-/* Alternate background for sections: odd-index sections get a light teal background, even-index get white */
 main > *:nth-child(odd) {
-  background-color: #E0F7FA; /* very light cyan/teal background */
+  background-color: #F0F8FF; /* ice blue */
 }
+
 main > *:nth-child(even) {
   background-color: #FFFFFF;
 }
 
-/* Container to constrain content width */
 .container {
   max-width: 900px;
-  margin: 0 auto;  /* center container within section */
-  /* (Horizontal padding is already provided by section padding) */
+  margin: 0 auto;
 }
 
-/* Header (Home) section specific styling */
 header#home {
-  text-align: center; /* center the intro text */
+  text-align: center;
 }
 
 /* Typography for headings */
 h1, h2, h3 {
-  color: #006f6f;  /* dark teal color for all headings */
+  color: #1A2B4C;
   margin-top: 0;
 }
 h1 {
@@ -99,8 +84,7 @@ h1 {
 }
 h2 {
   font-size: 1.5em;
-  /* Underline accent for section headings */
-  border-bottom: 3px solid #009B77; /* green-teal accent line */
+  border-bottom: 3px solid #4682B4; /* steel blue line */
   display: inline-block;
   padding-bottom: 4px;
   margin-bottom: 0.5em;
@@ -110,35 +94,22 @@ h3 {
   margin-bottom: 0.5em;
 }
 
-/* Paragraph inside sections (optional custom styling if needed)
-p {
-  line-height: 1.6;
-} 
-*/
-
-/* Projects section styling */
-.project {
-  margin-bottom: 30px; /* space between projects */
-}
-/* You can add more styling to project titles or links if desired */
-
-/* Skills list styling */
+/* Skills */
 .skills-list {
   list-style: none;
   margin: 0;
   padding: 0;
-  /* We can use flex or inline-block to make skills appear in a wrapped list */
 }
 .skills-list li {
   display: inline-block;
-  background: #A7E3D9; /* light teal-green background for skill item */
+  background: #B4D4F0;
   color: #000;
   padding: 5px 10px;
   margin: 5px 5px 5px 0;
   border-radius: 4px;
 }
 
-/* Contact list styling */
+/* Contact */
 .contact-list {
   list-style: none;
   margin: 0;
@@ -146,55 +117,48 @@ p {
 }
 .contact-list li {
   margin: 5px 0;
-  /* Each contact method on a new line */
 }
 .contact-list a {
-  color: #007A7C; /* link color (teal) for contact links on light background */
+  color: #007ACC;
   text-decoration: none;
 }
 .contact-list a:hover {
   text-decoration: underline;
 }
 
-/* Responsive Design: Media Query for larger screens */
+/* Responsive Design */
 @media (min-width: 768px) {
-  /* Hide the mobile toggle button on desktop */
   .nav-toggle {
     display: none;
   }
-  /* Show the nav menu as a horizontal flex row */
   .nav-menu {
     display: flex;
   }
   .nav-menu li {
-    margin-left: 20px; /* space between menu items */
+    margin-left: 20px;
   }
   .nav-menu a {
     padding: 8px 12px;
   }
 }
 
-/* Responsive Design: Media Query for small screens */
 @media (max-width: 767px) {
-  /* On mobile, show the toggle and hide the menu by default */
   .nav-toggle {
     display: inline-block;
   }
   .nav-menu {
-    display: none; /* hide menu by default */
+    display: none;
     flex-direction: column;
     width: 100%;
   }
   .nav-menu.active {
-    /* When mobile menu is toggled open */
     display: flex;
   }
   .nav-menu li {
     margin: 0;
-    /* Menu items will stretch to full width of nav */
   }
   .nav-menu a {
     padding: 10px 20px;
-    border-top: 1px solid #fff; /* separator line between items */
+    border-top: 1px solid #fff;
   }
 }
